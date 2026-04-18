@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProductCard({ product }) {
   return (
     <li className="product-card">
@@ -10,7 +12,9 @@ export default function ProductCard({ product }) {
       </div>
       <h2 className="product-name">{product.name}</h2>
       <p className="product-price">${product.price}</p>
-      <button className="btn-primary">View Details</button>
+      <Link to={`/product/${product.id}`}>
+        <button className="btn-primary">View Details</button>
+      </Link>
     </li>
   );
 }

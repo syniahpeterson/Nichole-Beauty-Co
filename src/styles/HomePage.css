@@ -1,0 +1,34 @@
+.home {
+  padding: 2rem;
+}
+
+.hero,
+.featured,
+.categories,
+.about,
+.cta {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
