@@ -16,9 +16,13 @@ export default function Navbar() {
         <li className="nav-item">
           <Link to={"/"}>Home</Link>
         </li>
-        <li className="nav-item"><Link to={"/shop"}>Shop</Link></li>
+        <li className="nav-item">
+          <Link to={"/shop"}>Shop</Link>
+        </li>
         <li className="nav-item cart">
-          <FaCartPlus />
+          <Link to={"/cart"}>
+            <FaCartPlus />
+          </Link>
         </li>
       </ul>
     </nav>
