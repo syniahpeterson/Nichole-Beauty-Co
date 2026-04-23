@@ -87,7 +87,16 @@ export default function CartPage() {
               <span>Total</span>
               <span>${totalPrice.toFixed(2)}</span>
             </div>
-            <button className="btn-primary">Proceed to Checkout</button>
+            <button
+              className="btn-primary"
+              onClick={() =>
+                (window.location.href =
+                  "https://buy.stripe.com/test_eVq28kdhPg1AdGK0v10sU00")
+              }
+              disabled={cartItems.length === 0}
+            >
+              Checkout with Stripe
+            </button>
             <small>Free shipping on $50+ orders</small>
           </aside>
         </section>
