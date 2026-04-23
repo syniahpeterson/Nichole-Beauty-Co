@@ -162,3 +162,34 @@
     font-size: 14px;
   }
 }
+
+/* Dark theme button styles for cart page */
+[data-theme="dark"] .cart-page .btn-primary:not(.checkout-btn) {
+  background: linear-gradient(180deg, #4a4a4d 0%, #343436 100%);
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Keep checkout button gold even in dark mode */
+[data-theme="dark"] .cart-page .checkout-btn {
+  background: linear-gradient(180deg, var(--accent) 0%, #b98f2a 100%);
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(212, 175, 55, 0.18);
+}
+
+[data-theme="dark"] .cart-page .remove-btn {
+  background: #2a2a2d;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+[data-theme="dark"] .cart-page .qty-btn {
+  background: #333336;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .cart-page .cart-summary {
+  background: #1f1f23;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}

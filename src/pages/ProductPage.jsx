@@ -24,7 +24,7 @@ export default function ProductPage() {
             </button>
           </Link>
           <img
-            className="product-image-lg"
+            className="product-image-lg image-zoom"
             src={product.image}
             alt={`Image of ${product.name}`}
           />
@@ -33,7 +33,7 @@ export default function ProductPage() {
 
       <aside className="product-details">
         <h1 className="pp-name">{product.name}</h1>
-        <p className="pp-price">${product.price}</p>
+        <p className="pp-price">${product.price.toFixed(2)}</p>
         <p className="pp-desc">{product.description}</p>
         <div className="pp-actions">
           <button

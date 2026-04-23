@@ -88,7 +88,7 @@ export default function CartPage() {
               <span>${totalPrice.toFixed(2)}</span>
             </div>
             <button
-              className="btn-primary"
+              className="btn-primary checkout-btn"
               onClick={() =>
                 (window.location.href =
                   "https://buy.stripe.com/test_eVq28kdhPg1AdGK0v10sU00")

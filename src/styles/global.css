@@ -1,0 +1,117 @@
+/* Global utilities, buttons, cards, and simple animations for uniform styling */
+
+:root {
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --elev-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --elev-md: 0 14px 36px rgba(0, 0, 0, 0.1);
+}
+
+/* Reusable container to match app width */
+.container {
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Cards */
+.card {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--elev-sm);
+  padding: 12px;
+}
+
+/* Primary CTA button used across app */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(180deg, var(--accent) 0%, #b98f2a 100%);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.16);
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 22px 58px rgba(212, 175, 55, 0.34),
+    0 0 30px rgba(212, 175, 55, 0.18);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Space between adjacent CTA buttons */
+.btn-primary + .btn-primary {
+  margin-left: 12px;
+}
+
+/* Simple animation utilities */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 420ms cubic-bezier(0.2, 0.9, 0.28, 1) both;
+}
+.float-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Image hover helper */
+.image-zoom {
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.9, 0.28, 1),
+    filter 0.35s ease;
+}
+.image-zoom:hover {
+  transform: scale(1.12);
+  filter: drop-shadow(0 26px 64px rgba(212, 175, 55, 0.18));
+}
+
+/* Small utilities */
+.muted {
+  color: var(--text);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
