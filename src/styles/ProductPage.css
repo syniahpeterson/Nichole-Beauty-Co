@@ -10,6 +10,41 @@
   box-sizing: border-box;
 }
 
+/* Back button (small) */
+.image-wrap-lg {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--code-bg);
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.9);
+  color: var(--text);
+  font-size: 14px;
+  z-index: 12;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.back-btn svg { width: 14px; height: 14px }
+
+.back-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+
 .product-hero {
   width: 100%;
 }

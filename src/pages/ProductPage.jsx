@@ -3,6 +3,8 @@ import products from "../data/products";
 import "../styles/ProductPage.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function ProductPage() {
   const dispatch = useDispatch();
@@ -16,6 +18,11 @@ export default function ProductPage() {
     <main className="product-page">
       <section className="product-hero">
         <div className="image-wrap-lg">
+          <Link to={"/shop"}>
+            <button className="back-btn">
+              <FaArrowLeft /> Back
+            </button>
+          </Link>
           <img
             className="product-image-lg"
             src={product.image}
