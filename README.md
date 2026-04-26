@@ -1,16 +1,39 @@
-# React + Vite
+# Nichole's Beauty Co.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce frontend application built with React and Redux Toolkit. This project simulates a real-world online store with product browsing, cart management, filtering, and checkout functionality.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing and dynamic product pages
+- Category-based filtering using URL query parameters
+- Global cart state management with Redux Toolkit
+- Cart quantity system with duplicate prevention
+- Persistent cart state using localStorage
+- Stripe hosted checkout integration (test mode)
+- Responsive and clean UI
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Redux Toolkit
+- React Router
+- JavaScript (ES6+)
+- CSS
+- Stripe (hosted checkout)
 
-## Expanding the ESLint configuration
+## 💳 Checkout
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Stripe Checkout is implemented using a hosted payment link in test mode to simulate a real-world payment flow without backend infrastructure.
+
+## 📦 Installation
+
+```bash
+git clone <your-repo-url>
+cd nicholes-beauty-co
+npm install
+npm run dev
+
+```
+
+## 🚀 Live Demo
+[Nichole's Beauty Co.](https://nichole-beauty-co.vercel.app/)
