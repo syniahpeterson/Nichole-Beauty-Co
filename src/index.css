@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -30,12 +36,25 @@
   }
 }
 
+html {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
   background: var(--bg);
   transition:
     background 0.28s ease,
     color 0.28s ease;
+  box-sizing: border-box;
 }
 
 /* Dark theme using data-theme="dark" on <html> */
@@ -54,15 +73,15 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   margin: 0 auto;
   text-align: center;
-  /* removed border-inline to allow full-width layout for first push */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,

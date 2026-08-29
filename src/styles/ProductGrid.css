@@ -1,11 +1,12 @@
 .product-grid {
   list-style: none;
   margin: 24px auto;
-  padding: 0;
+  padding: 0 16px;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   max-width: 1126px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -78,7 +79,8 @@
 @media (max-width: 580px) {
   .product-grid {
     gap: 12px;
-    margin: 16px;
+    margin: 16px auto;
+    padding: 0 12px;
   }
   .product-image {
     height: 140px;

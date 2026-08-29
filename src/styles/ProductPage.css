@@ -1,12 +1,13 @@
 /* Product page layout and styling */
 .product-page {
   max-width: 1126px;
+  width: 100%;
   margin: 28px auto;
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 28px;
   align-items: start;
-  padding: 0 20px;
+  padding: 0 16px;
   box-sizing: border-box;
 }
 
